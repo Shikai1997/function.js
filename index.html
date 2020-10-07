@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>克服js的奇怪部分 - library</title>
+</head>
+<body>
+    <div id="logindiv">
+        <select id="lang">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+        </select>
+        <input type="button" value="Login" id="Login" />
+    </div>
+
+    <h1 id="greeting"></h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="function.js"></script>
+
+
+    <script>
+        
+        $('#Login').click(function(){
+            let loginGrtr = G$('Alex','Luo')
+
+            $('#logindiv').hide();
+
+            // 模仿jquery 鏈式寫法
+            loginGrtr.setLang($('#lang').val()).HTMLGreeting('#greeting',true).log();
+        })
+    </script>
+</body>
+</html>
